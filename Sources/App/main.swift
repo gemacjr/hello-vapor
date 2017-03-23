@@ -20,11 +20,6 @@ drop.get("hello", "there") { request in
         ])
 }
 
-drop.get("beers", Int.self) { request, beers in
-    return try JSON(node: [
-        "message": "Take one down, pass it around, \(beers - 1) bottles of beer on the wall..."
-        ])
-}
 
 drop.get("beers", Int.self) { request, beers in
     return try JSON(node: [
